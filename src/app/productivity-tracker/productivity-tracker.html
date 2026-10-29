@@ -1,1 +1,10 @@
-<p>productivity-tracker works!</p>
+<p>Pourcentage actuel : {{ progressPercentage() }} %</p>
+<p>{{ message() }}</p>
+
+<button (click)="completerTache()" [disabled]="isGoalReached()">
+    +1 Tâche complétée
+</button>
+
+<button (click)="reinitialiser()">
+    Réinitialiser
+</button>
